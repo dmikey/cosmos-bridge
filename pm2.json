@@ -1,0 +1,28 @@
+{
+  "apps": [
+    {
+      "name": "bridge-http-server",
+      "script": "./dist/src/server/http.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "3000"
+      }
+    },
+    {
+      "name": "bridge-monitor",
+      "script": "./dist/src/server/monitor.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "4000"
+      }
+    },
+    {
+      "name": "bridge-banker",
+      "script": "npx ts-node ./dist/src/server/banker.js",
+      "env": {
+        "NODE_ENV": "production",
+        "PORT": "5000"
+      }
+    }
+  ]
+}
